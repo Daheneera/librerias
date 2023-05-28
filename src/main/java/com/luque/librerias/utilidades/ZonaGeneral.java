@@ -1,13 +1,14 @@
-package com.luque.librerias.entidades;
-
-import java.util.List;
+package com.luque.librerias.utilidades;
 
 
 
-public class ZonaGeneral extends Instalacion {
+
+
+public class ZonaGeneral extends InstalacionImpl implements sinHuesped{
 	
 	private Integer aforo;
-
+	
+	@Override
 	public Integer getAforo() {
 		return aforo;
 	}

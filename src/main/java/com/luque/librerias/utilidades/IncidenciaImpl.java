@@ -1,9 +1,9 @@
-package com.luque.librerias.entidades;
+package com.luque.librerias.utilidades;
 
 import java.time.LocalDate;
 
 
-public class Incidencia {
+public class IncidenciaImpl implements Incidencia{
 
 		public static enum Estado{
 			En_Estudio, Iniciada, Finalizada
@@ -18,61 +18,60 @@ public class Incidencia {
 		}
 	
 		
-		private Long id;
 		private String descripcion;
 		private Estado estadoIncidencia;
 		private LocalDate fechaAlta;
 		private LocalDate fechaInicio;
-		private Instalacion instalacion;
+		private InstalacionImpl instalacion;
 		private Tipo tipoIncidencia;
 		private Prelacion urgencia;
 		
 		
 		
 		//Getters & setters
-		public Long getId() {
-			return id;
-		}
-		public void setId(Long id) {
-			this.id = id;
-		}
+		@Override
 		public String getDescripcion() {
 			return descripcion;
 		}
 		public void setDescripcion(String descripcion) {
 			this.descripcion = descripcion;
 		}
+		@Override
 		public Estado getEstadoIncidencia() {
 			return estadoIncidencia;
 		}
 		public void setEstadoIncidencia(Estado estadoIncidencia) {
 			this.estadoIncidencia = estadoIncidencia;
 		}
+		@Override
 		public LocalDate getFechaAlta() {
 			return fechaAlta;
 		}
 		public void setFechaAlta(LocalDate fechaAlta) {
 			this.fechaAlta = fechaAlta;
 		}
+		@Override
 		public LocalDate getFechaInicio() {
 			return fechaInicio;
 		}
 		public void setFechaInicio(LocalDate fechaInicio) {
 			this.fechaInicio = fechaInicio;
 		}
-		
-		public Instalacion getInstalacion() {
+		@Override
+		public InstalacionImpl getInstalacion() {
 			return instalacion;
 		}
-		public void setInstalacion(Instalacion instalacion) {
+		public void setInstalacion(InstalacionImpl instalacion) {
 			this.instalacion = instalacion;
 		}
+		@Override
 		public Tipo getTipoIncidencia() {
 			return tipoIncidencia;
 		}
 		public void setTipoIncidencia(Tipo tipoIncidencia) {
 			this.tipoIncidencia = tipoIncidencia;
 		}
+		@Override
 		public Prelacion getUrgencia() {
 			return urgencia;
 		}
@@ -81,10 +80,12 @@ public class Incidencia {
 		}
 		@Override
 		public String toString() {
-			return "Incidencia [id=" + id + ", descripcion=" + descripcion + ", estadoIncidencia=" + estadoIncidencia
+			return "IncidenciaImpl [descripcion=" + descripcion + ", estadoIncidencia=" + estadoIncidencia
 					+ ", fechaAlta=" + fechaAlta + ", fechaInicio=" + fechaInicio + ", instalacion=" + instalacion
 					+ ", tipoIncidencia=" + tipoIncidencia + ", urgencia=" + urgencia + "]";
 		}
+		
+		
 		
 		
 		
